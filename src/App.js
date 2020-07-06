@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="Media">
+            <div>
+                <img className='media-cover'
+                     src="https://source.unsplash.com/260x160/?nature,water"
+                     width={260}
+                     height={160}
+                     alt="description item presentation"/>
+                <h3 className='Media-title'>Title</h3>
+                <p className='Media-author'>Author</p>
+            </div>
+        </div>
+    );
 }
 
 export default App;
