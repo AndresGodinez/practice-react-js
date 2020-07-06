@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 const rootElement = document.getElementById('root');
 
 ReactDOM.render(
-    <App title={"post title"} urlImage={`https://source.unsplash.com/260x160/?nature,water`} author={`Andres Godinez`}/> ,
+    <App title={"post title"} urlImage={`https://source.unsplash.com/260x160/?nature,water`} author={`Ing.a.godinez@gmail.com`} type={'video'}/> ,
     rootElement
 );
 
