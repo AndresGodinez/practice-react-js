@@ -3,10 +3,25 @@ import './App.css';
 import PropTypes from 'prop-types';
 
 class App extends Component {
+    state = {
+        author:this.props.author,
+    }
+
+    test = (e) => {
+        console.log(this.props.title);
+        console.log(e);
+        this.setState({
+            author: 'the author was changed'
+        })
+    }
+
+
     render() {
-        let {title, author, urlImage} = this.props;
+        let {title, urlImage} = this.props;
+        console.log(this);
+
         return (
-            <div className="Media">
+            <div className="Media" onClick={this.test}>
                 <div>
                     <img className='media-cover'
                          src={urlImage}
@@ -14,7 +29,7 @@ class App extends Component {
                          height={160}
                          alt="description item presentation"/>
                     <h3 className={'Media-title'}>{title}</h3>
-                    <p className='Media-author'>{author}</p>
+                    <p className='Media-author'>{this.state.author}</p>
                 </div>
             </div>
         );
