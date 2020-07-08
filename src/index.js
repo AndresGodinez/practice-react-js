@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Playlist from './Playlist/Components/Playlist';
-import data from './Playlist/Data/api.json'
+import data from './Data/api.json'
+import Home from './entries/Home'
 
 const rootElement = document.getElementById('root');
 
 ReactDOM.render(
-    <Playlist data={data} /> ,
+    <Home data={data} /> ,
     rootElement
 );
 
