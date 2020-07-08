@@ -1,39 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../Css/components/Media.css';
+
 import PropTypes from 'prop-types';
 
-class Media extends Component {
-    state = {
-        author:this.props.author,
-    }
+function Media(props) {
 
-    test = (e) => {
-        console.log(this.props.title);
-        console.log(e);
-        this.setState({
-            author: 'the author was changed'
-        })
-    }
+    let {title, author, cover} = props;
 
-
-    render() {
-        let {title, cover} = this.props;
-        console.log(this);
-
-        return (
-            <div className="Media" onClick={this.test}>
-                <div>
-                    <img className='media-cover'
-                         src={cover}
-                         width={260}
-                         height={160}
-                         alt="description item presentation"/>
-                    <h3 className={'Media-title'}>{title}</h3>
-                    <p className='Media-author'>{this.state.author}</p>
-                </div>
+    return (
+        <div className="Media">
+            <div>
+                <img className='media-cover'
+                     src={cover}
+                     width={260}
+                     height={160}
+                     alt="description item presentation"/>
+                <h3 className={'Media-title'}>{title}</h3>
+                <p className='Media-author'>{author}</p>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 Media.propTypes = {
