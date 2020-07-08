@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Playlist from './Playlist/Components/Playlist';
+import data from './Playlist/Data/api.json'
 
 const rootElement = document.getElementById('root');
 
 ReactDOM.render(
-    <App title={"post title"} urlImage={`https://source.unsplash.com/260x160/?nature,water`} author={`Ing.a.godinez@gmail.com`} type={'video'}/> ,
+    <Playlist data={data} /> ,
     rootElement
 );
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// serviceWorker.unregister();
