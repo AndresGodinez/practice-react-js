@@ -5,6 +5,7 @@
   width: 260px;
   margin-right: 5px;
   vertical-align: top;
+  font-family: arial, serif;
 }
 
 .Media:hover .Media-cover{
@@ -21,6 +22,10 @@
   margin: 5px 0 0 0;
   color: #44546b;
   white-space: normal;
+  font-family: Arial, serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .Media-author{
