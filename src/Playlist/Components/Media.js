@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import './App.css';
+import '../Css/components/Media.css';
 import PropTypes from 'prop-types';
 
-class App extends Component {
+class Media extends Component {
     state = {
         author:this.props.author,
     }
@@ -17,14 +17,14 @@ class App extends Component {
 
 
     render() {
-        let {title, urlImage} = this.props;
+        let {title, cover} = this.props;
         console.log(this);
 
         return (
             <div className="Media" onClick={this.test}>
                 <div>
                     <img className='media-cover'
-                         src={urlImage}
+                         src={cover}
                          width={260}
                          height={160}
                          alt="description item presentation"/>
@@ -36,11 +36,11 @@ class App extends Component {
     }
 }
 
-App.propTypes = {
+Media.propTypes = {
     title: PropTypes.string.isRequired,
-    urlImage: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['video', 'audio'])
 }
 
-export default App;
+export default Media;
