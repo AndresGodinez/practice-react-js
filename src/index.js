@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import data from './Data/api.json'
-import Home from './entries/Home'
+import HomeLayout from './Pages/layouts/home-layout'
+import Home from './entries/Home.js'
+import Related from './Related/related'
 
 const rootElement = document.getElementById('root');
 
 ReactDOM.render(
-    <Home data={data} /> ,
+    <HomeLayout>
+        <Related/>
+        <Home/>
+    </HomeLayout>,
     rootElement
 );
 

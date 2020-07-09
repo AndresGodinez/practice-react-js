@@ -1,11 +1,13 @@
-import React from "react";
+import React, {Component} from "react";
 import data from '../Data/api.json'
-import Categories from "../Categories/Categories";
+import Categories from "../Categories/components/Categories";
 
-function Home(){
-    return(
-        <Categories data={data}/>
-    );
+class Home extends Component {
+    render() {
+        return(
+            <Categories data={data}/>
+        );
+    }
 }
 
 export default Home;
